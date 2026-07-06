@@ -4,6 +4,8 @@
 Welcome to the **Handbook for Fixed-Point Workshop Using MATLAB®**!  
 This repository provides a comprehensive technical guide for engineers and scientists looking to design, analyze, and implement fixed-point algorithms efficiently using MATLAB® and related MathWorks® tools.
 
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=MathWorks-Teaching-Resources/Fixed-Point-Workshop)
+
 ## Overview
 
 Fixed-point arithmetic is crucial for deploying algorithms to resource-constrained hardware such as FPGAs, ASICs, and embedded processors. This handbook covers best practices, workflows, and MATLAB-specific techniques for:
