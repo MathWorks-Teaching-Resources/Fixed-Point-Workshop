@@ -1,0 +1,34 @@
+function [A,B] = realRandomLeastSquaresMatrices(m,n,p,rankA)
+%realRandomLeastSquaresMatrices Real random least-squares matrices
+%   [A,B] = fixed.example.realRandomLeastSquaresMatrices(m,n,p,rankA)
+%   returns uniformly distributed random real matrices A and B for the
+%   least-squares problem A*X = B such that the elements of A and B
+%   are between -1 and 1.
+%
+%   Inputs
+%
+%      m is the number of rows in matrices A and B.
+%
+%      n is the number of columns in matrix A.
+%
+%      p is the number of columns in matrix B.
+%
+%      rankA is the rank of matrix A.  If rankA is missing, then rankA=n (the
+%      matrix is full rank).
+
+%   Copyright 2021-2022 The MathWorks, Inc.
+    if nargin < 4
+        rankA = n;
+    end
+    U = fixed.example.realUniformRandomArray(-1,1,m,rankA);
+    V = fixed.example.realUniformRandomArray(-1,1,n,rankA);
+    W = fixed.example.realUniformRandomArray(-1,1,rankA,p);
+    
+    A = (U*V');
+    B = (U*W);
+
+    % Normalize so the elements of A and B are between -1 and 1.
+    A = A / max(abs(A),[],'all');
+    B = B / max(abs(B),[],'all');
+    
+end

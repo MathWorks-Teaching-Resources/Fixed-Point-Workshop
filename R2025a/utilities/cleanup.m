@@ -1,0 +1,3 @@
+function cleanup
+    caca;
+end

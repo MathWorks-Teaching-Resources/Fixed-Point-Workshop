@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  dft_polyphase_filter_data.c -o build/maci64/dft_polyphase_filter_data.o",
+    "file": "dft_polyphase_filter_data.c",
+    "output": "build/maci64/dft_polyphase_filter_data.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  rt_nonfinite.c -o build/maci64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/maci64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  dft_polyphase_filter_initialize.c -o build/maci64/dft_polyphase_filter_initialize.o",
+    "file": "dft_polyphase_filter_initialize.c",
+    "output": "build/maci64/dft_polyphase_filter_initialize.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  dft_polyphase_filter_terminate.c -o build/maci64/dft_polyphase_filter_terminate.o",
+    "file": "dft_polyphase_filter_terminate.c",
+    "output": "build/maci64/dft_polyphase_filter_terminate.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  dft_polyphase_filter.c -o build/maci64/dft_polyphase_filter.o",
+    "file": "dft_polyphase_filter.c",
+    "output": "build/maci64/dft_polyphase_filter.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  fir_filter_bank.c -o build/maci64/fir_filter_bank.o",
+    "file": "fir_filter_bank.c",
+    "output": "build/maci64/fir_filter_bank.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  inverse_fft.c -o build/maci64/inverse_fft.o",
+    "file": "inverse_fft.c",
+    "output": "build/maci64/inverse_fft.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  interface/_coder_dft_polyphase_filter_api.c -o build/maci64/_coder_dft_polyphase_filter_api.o",
+    "file": "interface/_coder_dft_polyphase_filter_api.c",
+    "output": "build/maci64/_coder_dft_polyphase_filter_api.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  interface/_coder_dft_polyphase_filter_mex.c -o build/maci64/_coder_dft_polyphase_filter_mex.o",
+    "file": "interface/_coder_dft_polyphase_filter_mex.c",
+    "output": "build/maci64/_coder_dft_polyphase_filter_mex.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  interface/_coder_dft_polyphase_filter_info.c -o build/maci64/_coder_dft_polyphase_filter_info.o",
+    "file": "interface/_coder_dft_polyphase_filter_info.c",
+    "output": "build/maci64/_coder_dft_polyphase_filter_info.o"
+  },
+  {
+    "directory": "/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/codegen/mex/dft_polyphase_filter",
+    "command": "/usr/bin/xcrun -sdk macosx14.5 clang -fno-common -arch x86_64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk -fwrapv -ffp-contract=off  -DMATLAB_MEX_FILE -O2 -DNDEBUG -std=c99 -I \".\" -I \"/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DMODEL=dft_polyphase_filter_mex -c  /Applications/MATLAB_R2024a.app/extern/version/c_mexapi_version.c -o build/maci64/c_mexapi_version.o",
+    "file": "/Applications/MATLAB_R2024a.app/extern/version/c_mexapi_version.c",
+    "output": "build/maci64/c_mexapi_version.o"
+  }
+]

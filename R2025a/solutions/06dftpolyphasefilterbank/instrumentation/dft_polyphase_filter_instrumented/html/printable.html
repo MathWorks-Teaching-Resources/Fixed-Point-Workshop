@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<h1>Instrumentation Results for dft_polyphase_filter_instrumented</h1>
+<h2>Summary</h2>
+<p>To re-create this report:</p>
+<pre>  showInstrumentationResults dft_polyphase_filter_instrumented</pre>
+
+<p>MEX-function name:</p>
+<pre>dft_polyphase_filter_instrumented</pre>
+<p>Timestamp:</p>
+<pre>Fri Jul 19 10:55:56 2024</pre>
+<p>To open this report from the MATLAB command line:</p>
+<pre> web('-browser','/Users/tbryan/work/flow/training/workshops/R2024a/FixedPointMATLABWorkshopR2024a/solutions/06dftpolyphasefilterbank/instrumentation/dft_polyphase_filter_instrumented/html/printable.html')</pre>
+
+
+<h2>Function dft_polyphase_filter </h2>
+
+<pre>
+function [magnitudeY, angleY] = dft_polyphase_filter(B,U,T)
+    X = fir_filter_bank(B,U,T.fir_filter);
+    Y = inverse_fft(X,T.fft,1);
+    [magnitudeY, angleY] = cordic_cart2pol(Y);
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for dft_polyphase_filter</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>B</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>17</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.00506481050409288</code></td><td><code>0.031316659823575836</code></td></tr>
+<tr><td><code>T</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>struct</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td></tr>
+<tr><td><code>T.fir_filter.coeff</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>17</code></td><td><code>51</code></td><td><code>No</code></td><td><code>0.031316659823575836</code></td><td><code>0.031316659823575836</code></td></tr>
+<tr><td><code>T.fir_filter.acc</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>39</code></td><td><code>37</code></td><td><code>51</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>1</code></td></tr>
+<tr><td><code>T.fir_filter.x</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>1</code></td></tr>
+<tr><td><code>T.fir_filter.y</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>51</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>1</code></td></tr>
+<tr><td><code>T.fir_filter.z</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>1</code></td></tr>
+<tr><td><code>T.fft.x</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.01</code></td></tr>
+<tr><td><code>T.fft.w</code></td><td><code>Field</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.01</code></td></tr>
+<tr><td><code>U</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+<tr><td><code>X</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>Y</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03138869703801431</code></td><td><code>0.033648520039800636</code></td></tr>
+<tr><td><code>angleY</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>59</code></td><td><code>No</code></td><td><code>-1.5707681453098903</code></td><td><code>4.712360798899684</code></td></tr>
+<tr><td><code>magnitudeY</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.03365652723110121</code></td></tr>
+</table>
+
+<h2>Function increment_and_wrap_index </h2>
+
+<pre>
+function p = increment_and_wrap_index(m,n)
+    if log2(double(n))==floor(log2(double(n)))
+        % power of 2
+        p = bitand(m,cast(n,'like',m)-1)+1;
+    else
+        p = m + 1;
+        if p > n
+            p(:) = 1;
+        end
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for increment_and_wrap_index</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>m</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int16</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>8</code></td></tr>
+<tr><td><code>n</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>8</code></td><td><code>8</code></td></tr>
+<tr><td><code>p</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int16</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>8</code></td></tr>
+</table>
+
+<h2>Function fir_filter_circular_buffer </h2>
+
+<pre>
+function [y,z,p] = fir_filter_circular_buffer(b,x,z,p,T)
+%FIR_FILTER_CIRCULAR_BUFFER Finite impulse response filter with circular buffer.
+%
+%    [y,z,p] = fir_filter_circular_buffer(b,x,z,p,T)
+%    filters the data in vector x using an efficient circular buffer
+%    implementation with the filter described by vector b to create the
+%    filtered data y.
+%
+%    The coefficients, b, are the same as used in the MATLAB function filter(b,1,...).
+%
+%    Output y(n) is equal to
+% 
+%      y(n) = b(1)*x(n) + b(2)*x(n-1) + ... + b(nb)*x(n-nb+1)
+%
+%    The states are stored in a circular buffer, z, which should be
+%    the same size as b.  For all zero initial states, initialize z as
+%    
+%      z = zeros(size(b));
+%
+%    The circular buffer position index p should be initialized to 
+%
+%      p = 0;
+%
+%    Example:
+%
+%      T = fir_filter_double_types([]);
+%      b = cast(fir1(16,0.25),'like',T.coeff);
+%      t = linspace(0,10*pi,256);
+%      x = cast(sin(pi*0.0625*t.^2),'like',T.x);
+%      z = cast(zeros(size(b)),'like',T.z);
+%      p = cast(0,'like',T.p);
+%      y0 = filter(b,1,x);
+%      y1 = fir_filter_circular_buffer(b,x,z,p,T);
+%      clf
+%      subplot(2,1,1)
+%      plot(t,x,t,y0,t,y1)
+%      legend('Input','Builtin filter','Reverse coefficients filter')
+%      subplot(2,1,2)
+%      plot(t,double(y0)-double(y1))
+%      legend('Difference')
+
+% Copyright 2018 The MathWorks, Inc.
+
+    y = zeros(size(x),'like',T.y);
+    nx = length(x);
+    nb = length(b);
+    for n=1:nx
+        p(:) = increment_and_wrap_index(p,nb);
+        z(p) = x(n);
+        acc = cast(0,'like',T.acc);
+        k = p;
+        for j = nb:-1:1
+            k(:) = increment_and_wrap_index(k,nb);
+            acc(:) = acc + b(j)*z(k);
+        end
+        y(n) = acc;
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for fir_filter_circular_buffer</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>acc</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>39</code></td><td><code>37</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.0350888299883277</code></td><td><code>0.03844653172637033</code></td></tr>
+<tr><td><code>b</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>17</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.00506481050409288</code></td><td><code>0.031316659823575836</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>8</code></td></tr>
+<tr><td><code>k</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int16</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>8</code></td></tr>
+<tr><td><code>n</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>4000</code></td></tr>
+<tr><td><code>nb</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>8</code></td><td><code>8</code></td></tr>
+<tr><td><code>nx</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>4000</code></td><td><code>4000</code></td></tr>
+<tr><td><code>p</code></td><td><code>I/O</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int16</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>8</code></td></tr>
+<tr><td><code>x</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+<tr><td><code>y</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>z</code></td><td><code>I/O</code></td><td><code>1&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+</table>
+
+<h2>Function fir_filter_bank </h2>
+
+<pre>
+function X = fir_filter_bank(B,U,T)
+% M = Number of channels in the filter bank.
+% N = Number of taps in each FIR filter.
+
+    M = size(U,1);
+    N = size(B,2);
+    P = zeros(M,1,'like',T.p);
+    Z = zeros(M,N,'like',T.z);
+    X = zeros(size(U),'like',T.y);
+    for i = 1:M
+        [X(i,:),Z(i,:),P(i)] = fir_filter_circular_buffer(B(i,:),U(i,:),Z(i,:),P(i),T);
+    end
+
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for fir_filter_bank</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>B</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>17</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.00506481050409288</code></td><td><code>0.031316659823575836</code></td></tr>
+<tr><td><code>M</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>N</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>8</code></td><td><code>8</code></td></tr>
+<tr><td><code>P</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;1</code></td><td><code>int16</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>8</code></td></tr>
+<tr><td><code>U</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+<tr><td><code>X</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>Z</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;8</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>14</code></td><td><code>12</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.4483832160850274</code></td><td><code>0.9999999756031032</code></td></tr>
+<tr><td><code>i</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>32</code></td></tr>
+</table>
+
+<h2>Function radix2twiddles </h2>
+
+<pre>
+function w = radix2twiddles(n) 
+    t = log2(n);
+    if floor(t) ~= t
+        error('N must be an exact power of two.');
+    end
+
+    w = complex(zeros(n-1,1));
+    k=1;
+    L=2;
+
+    while L<=n
+        theta = 2*pi/L;
+        for j=0:(L/2 - 1)
+            w(k) = complex( cos(j*theta), -sin(j*theta) );
+            k = k + 1;
+        end
+        L = L*2;
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for radix2twiddles</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>L</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>2</code></td><td><code>64</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>15</code></td></tr>
+<tr><td><code>k</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>32</code></td></tr>
+<tr><td><code>n</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>t</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>5</code></td><td><code>5</code></td></tr>
+<tr><td><code>theta</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code>No</code></td><td><code>0.19634954084936207</code></td><td><code>3.141592653589793</code></td></tr>
+<tr><td><code>w</code></td><td><code>Output</code></td><td><code>31&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>Yes</code></td><td><code>No</code></td><td><code>-1</code></td><td><code>1</code></td></tr>
+</table>
+
+<h2>Function bitreverse </h2>
+
+<pre>
+function x = bitreverse(x,n0)
+    n = int32(n0);
+    nv2 = bitsra(n,1);
+    j = int32(1);
+    for i=1:(n-1)
+        if i<j
+            temp = x(j);
+            x(j) = x(i);
+            x(i) = temp;
+        end
+        k = nv2;
+        while k<j
+            j = j-k;
+            k = bitsra(k,1);
+        end
+        j = j+k;
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for bitreverse</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>i</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>31</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>32</code></td></tr>
+<tr><td><code>k</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>16</code></td></tr>
+<tr><td><code>n</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>n0</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>nv2</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>16</code></td><td><code>16</code></td></tr>
+<tr><td><code>temp</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>x</code></td><td><code>I/O</code></td><td><code>32&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+</table>
+
+<h2>Function radix2fft_with_scaling </h2>
+
+<pre>
+function x = radix2fft_with_scaling(x, w)
+    n = length(x);
+    t = log2(n);
+    x = bitreverse(x,n);
+    LL = int32(2.^(1:t));
+    rr = int32(n./LL);
+    LL2 = int32(LL./2);
+    for q=1:t
+        L = LL(q); r = rr(q); L2 = LL2(q);
+        for k=0:(r-1)
+            % Skip multiply by w^0=1
+            x0          = x(k*L+L2+1);
+            x(k*L+L2+1) = bitsra(x(k*L+1) - x0, 1);
+            x(k*L+1)    = bitsra(x(k*L+1) + x0, 1);
+            for j=1:(L2-1)
+                x0            = w(L2-1+j+1) * x(k*L+j+L2+1);
+                x(k*L+j+L2+1) = bitsra(x(k*L+j+1) - x0, 1);
+                x(k*L+j+1)    = bitsra(x(k*L+j+1) + x0, 1);
+            end
+        end
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for radix2fft_with_scaling</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>L</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>2</code></td><td><code>32</code></td></tr>
+<tr><td><code>L2</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>16</code></td></tr>
+<tr><td><code>LL</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;5</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>2</code></td><td><code>32</code></td></tr>
+<tr><td><code>LL2</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;5</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>16</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>15</code></td></tr>
+<tr><td><code>k</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>15</code></td></tr>
+<tr><td><code>n</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>q</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>5</code></td></tr>
+<tr><td><code>r</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>16</code></td></tr>
+<tr><td><code>rr</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;5</code></td><td><code>int32</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>16</code></td></tr>
+<tr><td><code>t</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>5</code></td><td><code>5</code></td></tr>
+<tr><td><code>w</code></td><td><code>Input</code></td><td><code>31&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.9807852804032304</code></td><td><code>1</code></td></tr>
+<tr><td><code>x</code></td><td><code>I/O</code></td><td><code>32&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>x0&gt;1</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.03478789870192022</code></td></tr>
+<tr><td><code>x0&gt;2</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>36</code></td><td><code>32</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>-0.03139974880492695</code></td><td><code>0.03139974880488722</code></td></tr>
+</table>
+
+<h2>Function inverse_fft </h2>
+
+<pre>
+function Y = inverse_fft(X, T, dim)
+    M = size(X,1);
+    w = cast(conj(radix2twiddles(M)),'like',T.w);
+    X = cast(X,'like',T.x);
+    Y = zeros(size(X),'like',T.x);
+    if nargin < 3
+        if isvector(X)
+            Y = radix2fft_with_scaling(X,w);
+        else
+            dim = 1;
+        end
+    end
+    switch dim
+        case 1
+            for j = 1:size(X,2)
+                Y(:,j) = radix2fft_with_scaling(X(:,j), w);
+            end
+        case 2
+            for i = 1:size(X,2)
+                Y(i,:) = radix2fft_with_scaling(X(i,:), w);
+            end
+        otherwise
+            error('Dimension argument must be 1 or 2')
+    end
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for inverse_fft</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>M</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>32</code></td><td><code>32</code></td></tr>
+<tr><td><code>X&gt;1</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>X&gt;2</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03149084124926006</code></td><td><code>0.035084730385062365</code></td></tr>
+<tr><td><code>Y</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03138869703801431</code></td><td><code>0.033648520039800636</code></td></tr>
+<tr><td><code>dim</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>1</code></td></tr>
+<tr><td><code>j</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>4000</code></td></tr>
+<tr><td><code>w</code></td><td><code>Local</code></td><td><code>31&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>51</code></td><td><code>No</code></td><td><code>-0.9807852804032304</code></td><td><code>1</code></td></tr>
+</table>
+
+<h2>Function cordic_angular_increments </h2>
+
+<pre>
+function a = cordic_angular_increments(N)
+    a = atan(2 .^ -(0:N-1)');
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for cordic_angular_increments</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>N</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+<tr><td><code>a</code></td><td><code>Output</code></td><td><code>17&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code>No</code></td><td><code>1.5258789061315762e-05</code></td><td><code>0.7853981633974483</code></td></tr>
+</table>
+
+<h2>Function cordic_magnitude_angle_types </h2>
+
+<pre>
+function [T,N,a] = cordic_magnitude_angle_types(t)
+    if isfi(t)
+        datatype = t.DataType;
+        w = t.WordLength;
+        N = w - 1;
+        f = t.FractionLength;
+        F_xy = fimath('RoundingMethod', 'Floor', ...
+            'OverflowAction', 'Wrap',...
+            'SumMode','SpecifyPrecision',...
+            'SumWordLength',w,...
+            'SumFractionLength',w-3);
+        F_t = fimath('RoundingMethod', 'Floor', ...
+            'OverflowAction', 'Wrap',...
+            'SumMode','SpecifyPrecision',...
+            'SumWordLength',w,...
+            'SumFractionLength',f-2);
+        F_z = fimath('RoundingMethod', 'Floor', ...
+            'OverflowAction', 'Wrap',...
+            'SumMode','SpecifyPrecision',...
+            'SumWordLength',w,...
+            'SumFractionLength',w-4);
+        T.a = fi([],0,w,w-1,'DataType',datatype);
+        T.t = fi([],1,w,f-2,F_t,'DataType',datatype);
+        T.x = fi([],1,w,w-3,F_xy,'DataType',datatype);
+        T.y = fi([],1,w,w-3,F_xy,'DataType',datatype);
+        T.z = fi([],1,w,w-4,F_z,'DataType',datatype);
+    else
+        N = 52;
+        T.a = cast([],'like',t);
+        T.t = cast([],'like',t);
+        T.x = cast([],'like',t);
+        T.y = cast([],'like',t);
+        T.z = cast([],'like',t);
+    end
+    a = cast(cordic_angular_increments(N),'like',T.a);
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for cordic_magnitude_angle_types</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>N</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+<tr><td><code>a</code></td><td><code>Output</code></td><td><code>17&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Unsigned</code></td><td><code>18</code></td><td><code>17</code></td><td><code>40</code></td><td><code>No</code></td><td><code>1.5258789061315762e-05</code></td><td><code>0.7853981633974483</code></td></tr>
+<tr><td><code>f</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>16</code></td><td><code>16</code></td></tr>
+<tr><td><code>w</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>18</code></td><td><code>18</code></td></tr>
+</table>
+
+<h2>Function cordic_growth_constant </h2>
+
+<pre>
+function An = cordic_growth_constant(N)
+    % CORDIC_GROWTH_CONSTANT(N) returns the CORDIC growth factor after N
+    % iterations. The cordic growth constant quickly converges to around
+    % 1.6468.
+    An = prod(sqrt(1+2.^(-2*(0:double(N)-1))));
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for cordic_growth_constant</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>An</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code>No</code></td><td><code>1.646760258057163</code></td><td><code>1.646760258057163</code></td></tr>
+<tr><td><code>N</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+</table>
+
+<h2>Function inverse_cordic_growth_constant </h2>
+
+<pre>
+function Kn = inverse_cordic_growth_constant(N)
+    % Kn = INVERSE_CORDIC_GROWTH_CONSTANT(N) returns the inverse of the
+    % CORDIC growth factor after N iterations. The inverse cordic growth
+    % constant Kn quickly converges to around 0.60725.
+    Kn = 1/cordic_growth_constant(N);
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for inverse_cordic_growth_constant</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>Kn</code></td><td><code>Output</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code>No</code></td><td><code>0.6072529350324457</code></td><td><code>0.6072529350324457</code></td></tr>
+<tr><td><code>N</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+</table>
+
+<h2>Function cordic_vectoring_kernel </h2>
+
+<pre>
+function [x, y, z] = cordic_vectoring_kernel(x, y, z, N, a)
+    assert(isscalar(x) && isscalar(y) && isscalar(z));
+    if x<0
+        % Compensation for 3rd and 4th quadrants
+        x(:) = -x;
+        y(:) = -y;
+        angle_correction = cast(pi,'like',z);
+    else
+        angle_correction = cast(0,'like',z);
+    end
+    for n = 0:N-1
+        xn = bitsra(x,n);
+        yn = bitsra(y,n);
+        if y < 0
+            % Counter-clockwise rotation
+            x(:) = x - yn;
+            y(:) = y + xn;
+            z(:) = z - a(n+1);
+        else
+            % Clockwise rotation
+            x(:) = x + yn;
+            y(:) = y - xn;
+            z(:) = z + a(n+1);
+        end
+    end
+    z(:) = z + angle_correction;
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for cordic_vectoring_kernel</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>N</code></td><td><code>Input</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+<tr><td><code>a</code></td><td><code>Input</code></td><td><code>17&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Unsigned</code></td><td><code>18</code></td><td><code>17</code></td><td><code>40</code></td><td><code>No</code></td><td><code>1.5258789061315762e-05</code></td><td><code>0.7853981633974483</code></td></tr>
+<tr><td><code>angle_correction</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>40</code></td><td><code>No</code></td><td><code>0</code></td><td><code>3.141592653589793</code></td></tr>
+<tr><td><code>n</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>16</code></td></tr>
+<tr><td><code>x</code></td><td><code>I/O</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03138869703800304</code></td><td><code>0.055424231468396166</code></td></tr>
+<tr><td><code>xn</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.033648520039800636</code></td></tr>
+<tr><td><code>y</code></td><td><code>I/O</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>-0.03291440520308309</code></td><td><code>0.03138869703799527</code></td></tr>
+<tr><td><code>yn</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>-0.03138869703801431</code></td><td><code>0.031387959567347995</code></td></tr>
+<tr><td><code>z</code></td><td><code>I/O</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>59</code></td><td><code>No</code></td><td><code>-1.6183794300718801</code></td><td><code>4.712360798899684</code></td></tr>
+</table>
+
+<h2>Function cordic_cart2pol </h2>
+
+<pre>
+function [magnitudeZ, angleZ] = cordic_cart2pol(Z)
+    [T,N,a] = cordic_magnitude_angle_types(real(Z(1)));
+    Kn = inverse_cordic_growth_constant(N);
+    magnitudeZ = zeros(size(Z),'like',T.x);
+    angleZ = zeros(size(Z),'like',T.z);
+    for i = 1:numel(Z)
+        x = cast(real(Z(i)),'like',T.x);
+        y = cast(imag(Z(i)),'like',T.y);
+        z = zeros(1,'like',T.z);
+        [magnitudeZ(i), ~, angleZ(i)] = cordic_vectoring_kernel(x, y, z, N, a);
+        magnitudeZ(i) = magnitudeZ(i) * Kn;
+    end
+    magnitudeZ = removefimath(magnitudeZ);
+    angleZ = removefimath(angleZ);
+end
+</pre>
+<table style="border-collapse: collapse; border: solid;" border="1">
+<caption><b>Logged Variables for cordic_cart2pol</b></caption>
+<tr><th>Variable</th><th>Type</th><th>Size</th><th>Class</th><th>Complex</th><th>DT Mode</th><th>Signedness</th><th>WL</th><th>FL</th><th>Percent of<br>Current Range</th><th>Always<br>Whole Number</th><th>SimMin</th><th>SimMax</th></tr>
+<tr><td><code>Kn</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code>No</code></td><td><code>0.6072529350324457</code></td><td><code>0.6072529350324457</code></td></tr>
+<tr><td><code>N</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>17</code></td><td><code>17</code></td></tr>
+<tr><td><code>Z</code></td><td><code>Input</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>Yes</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>16</code></td><td><code>2</code></td><td><code>No</code></td><td><code>-0.03138869703801431</code></td><td><code>0.033648520039800636</code></td></tr>
+<tr><td><code>a</code></td><td><code>Local</code></td><td><code>17&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Unsigned</code></td><td><code>18</code></td><td><code>17</code></td><td><code>40</code></td><td><code>No</code></td><td><code>1.5258789061315762e-05</code></td><td><code>0.7853981633974483</code></td></tr>
+<tr><td><code>angleZ&gt;1</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>59</code></td><td><code>No</code></td><td><code>-1.5707681453098903</code></td><td><code>4.712360798899684</code></td></tr>
+<tr><td><code>angleZ&gt;2</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>59</code></td><td><code>No</code></td><td><code>-1.5707681453098903</code></td><td><code>4.712360798899684</code></td></tr>
+<tr><td><code>i</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>double</code></td><td><code>No</code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code></code></td><td><code><b>Yes</b></code></td><td><code>1</code></td><td><code>128000</code></td></tr>
+<tr><td><code>magnitudeZ&gt;1</code></td><td><code>Output</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.03365652723110121</code></td></tr>
+<tr><td><code>magnitudeZ&gt;2</code></td><td><code>Local</code></td><td><code>32&nbsp;x&nbsp;4000</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>2</code></td><td><code>No</code></td><td><code>0</code></td><td><code>0.055424231468396166</code></td></tr>
+<tr><td><code>x</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>-0.03138869703800304</code></td><td><code>0.033648520039800636</code></td></tr>
+<tr><td><code>y</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>15</code></td><td><code>< 1</code></td><td><code>No</code></td><td><code>-0.03138869703801431</code></td><td><code>0.03138869703799527</code></td></tr>
+<tr><td><code>z</code></td><td><code>Local</code></td><td><code>1&nbsp;x&nbsp;1</code></td><td><code>embedded.fi</code></td><td><code>No</code></td><td><code>ScaledDouble</code></td><td><code>Signed</code></td><td><code>18</code></td><td><code>14</code></td><td><code>0</code></td><td><code><b>Yes</b></code></td><td><code>0</code></td><td><code>0</code></td></tr>
+</table>
+</html>
