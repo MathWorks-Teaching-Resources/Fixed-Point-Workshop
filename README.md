@@ -33,7 +33,7 @@ Fixed-point arithmetic is crucial for deploying algorithms to resource-constrain
 ## Useful Links
 
 - [Fixed-Point Designer™ Documentation](https://www.mathworks.com/help/fixedpoint/)
-- [Fixed-Point Conversion Workflow](https://www.mathworks.com/help/fixedpoint/ug/workflow-for-converting-matlab-code-to-fixed-point.html)
+- [Fixed-Point Conversion Workflow](https://www.mathworks.com/help/fixedpoint/manual-fixed-point-conversion-in-matlab.html)
 - [Simulink Fixed-Point Tool](https://www.mathworks.com/help/fixedpoint/ref/fixedpointtool.html)
 - [MATLAB MCP Core Server](https://www.mathworks.com/products/matlab-mcp-core-server.html)
 
